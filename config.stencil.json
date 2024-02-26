@@ -1,0 +1,10 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  },
+  "normalStoreUrl": "https://the-fly-shop-sandbox.mybigcommerce.com",
+  "port": "3000"
+}
