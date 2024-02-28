@@ -1,1 +1,19 @@
 // PASTE CUSTOM STYLING HERE
+.cart-sidbar {
+  display: none;
+}
+
+
+@media (min-width: 801px) {
+  #cart {
+    .cart-sidbar {
+
+    }
+
+    .cart-main {
+      width: 70%;
+    }
+  }
+}
+
+
