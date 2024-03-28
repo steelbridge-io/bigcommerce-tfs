@@ -188,7 +188,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Customizations
 
-cart.html
+Adds the sidbar nave to the cart. Find the cart.html file a page, find `{{#partial "page"}}` and below it replace the opening `<div class="page">` with the code below:
+
+found in: templates/cart.html
 
 ```html
 <!-- Custom Side Category Nav -->
@@ -197,7 +199,36 @@ cart.html
     <div class="cart-sidebar">
         {{> components/custom/sidenav}}
     </div>
-    <!-- /Custom Side Category Nav -->
+<!-- /Custom Side Category Nav -->
+```
+
+For CSS, find:
+assets/scss
+
+Inside create custom.scss 
+
+In assets/scss/theme.scss add `@import "custom";` around line #89.
+
+In the custom.css file add the following css:
+
+```
+// PASTE CUSTOM STYLING HERE
+.cart-sidbar {
+display: none;
+}
+
+
+@media (min-width: 801px) {
+#cart {
+.cart-sidbar {
+
+    }
+
+    .cart-main {
+      width: 70%;
+    }
+}
+}
 ```
 
 
