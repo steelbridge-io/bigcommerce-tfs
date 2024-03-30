@@ -1,19 +1,70 @@
 // PASTE CUSTOM STYLING HERE
-.cart-sidbar {
-  display: none;
+
+.header-container.sticky-header {
+  position: relative;
+  z-index: 1000;
 }
 
+.modal.modal--afterOpen.optimizedCheckout-cart-modal .modal-body {
+  height: 89% !important;
+}
+
+.custom-checkout {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@media (min-width: 969px) {
+
+  .checkout-contents {
+    .layout-main {
+      width: 40.66667% !important;
+      padding-right: 0 !important;
+    }
+  }
+  .layout-cart {
+    width: 37.33333% !important;
+    padding-right: 0 !important;
+
+  }
+}
 
 @media (min-width: 801px) {
   #cart {
-    .cart-sidbar {
-
-    }
-
     .cart-main {
       width: 70%;
     }
   }
 }
+
+
+@media (max-width: 968.99px) {
+
+  .checkout-contents {
+    .layout-main {
+      width: 40.66667% !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .modalOverlay.modalOverlay--afterOpen {
+    .modal {
+      margin: 170px auto 0 auto;
+    }
+  }
+  .cartDrawer {
+    position: relative !important;
+  }
+}
+
+@media (max-width: 800.99px) {
+  #cart {
+    .cart-main {
+      width: 100%;
+    }
+  }
+}
+
+
 
 
