@@ -3,13 +3,15 @@ cart: true
 ---
 {{#partial "page"}}
 
-<div class="page">
+<!-- Custom Side Category Nav -->
+<div id="cart" class="page">
 
     <div class="cart-sidebar">
         {{> components/custom/sidenav}}
     </div>
+    <!-- /Custom Side Category Nav -->
 
-    <main class="page-content" data-cart>
+    <main class="page-content cart-main" data-cart>
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
         {{> components/cart/page-title}}

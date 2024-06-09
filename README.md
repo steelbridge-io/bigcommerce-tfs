@@ -184,3 +184,51 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # bigcommerce-tfs
+
+
+### Customizations
+
+Adds the sidbar nave to the cart. Find the cart.html file a page, find `{{#partial "page"}}` and below it replace the opening `<div class="page">` with the code below:
+
+found in: templates/cart.html
+
+```html
+<!-- Custom Side Category Nav -->
+<div id="cart" class="page">
+
+    <div class="cart-sidebar">
+        {{> components/custom/sidenav}}
+    </div>
+<!-- /Custom Side Category Nav -->
+```
+
+For CSS, find:
+assets/scss
+
+Inside create custom.scss 
+
+In assets/scss/theme.scss add `@import "custom";` around line #89.
+
+In the custom.css file add the following css:
+
+```
+// PASTE CUSTOM STYLING HERE
+.cart-sidbar {
+display: none;
+}
+
+
+@media (min-width: 801px) {
+#cart {
+.cart-sidbar {
+
+    }
+
+    .cart-main {
+      width: 70%;
+    }
+}
+}
+```
+
+
