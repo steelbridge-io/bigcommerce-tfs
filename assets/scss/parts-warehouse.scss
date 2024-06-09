@@ -3366,7 +3366,7 @@ body.main.nine-sixty .sidebar.right .carousel-vertical .card-figure {
 }
 /*CART PAGE*/
  main.page-content {
-     padding: 0 !important;
+     padding: 0;
 }
  .cart-actions .button {
      font-family: stencilFontFamily("forms-submitButton-fontFamily");
@@ -3924,6 +3924,7 @@ body.main.nine-sixty .sidebar.right .carousel-vertical .card-figure {
 }
  .cart-additionalCheckoutButtons {
      float: right;
+	   display: none !important;
 }
  .cart-total-value button:hover {
      color: stencilColor("color-primary");

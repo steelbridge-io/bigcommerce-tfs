@@ -1,1 +1,28 @@
 // PASTE CUSTOM STYLING HERE
+
+main.page-content {
+  padding-left: 2em;
+  width: 76%;
+}
+
+#topcontrol {
+  &.backtoTop {
+    bottom: 91px;
+  }
+}
+
+#cart {
+
+  .cart-additionalCheckoutButtons {
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width: 800.99px) {
+  main.page-content {
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
