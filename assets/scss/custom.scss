@@ -1,5 +1,11 @@
 // PASTE CUSTOM STYLING HERE
 
+#cart {
+  .cart-additionalCheckoutButtons {
+    display: none;
+  }
+}
+
 .header-container.sticky-header {
   position: relative;
   z-index: 1000;
@@ -42,8 +48,8 @@
 
   .checkout-contents {
     .layout-main {
-      width: 40.66667% !important;
-      padding-right: 0 !important;
+      width: 40.66667%;
+      padding-right: 0;
     }
   }
 
@@ -53,7 +59,7 @@
     }
   }
   .cartDrawer {
-    position: relative !important;
+    position: relative;
   }
 }
 
@@ -61,6 +67,30 @@
   #cart {
     .cart-main {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  #checkout-app {
+    #checkout-page-container {
+      .layout {
+        display: flex;
+        & > div:first-child {
+          display: flex;
+          flex-direction: colum-reverse;
+        }
+        .layout-main {
+          width: 100%;
+          padding: 1em 0;
+        }
+
+        .cartDrawer {
+          margin: 1.618em auto;
+          position: relative;
+          width: 100%;
+        }
+      }
     }
   }
 }
