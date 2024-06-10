@@ -1,5 +1,19 @@
 // PASTE CUSTOM STYLING HERE
 
+#checkout-customer-guest {
+  &.checkout-form {
+    .form-fieldset {
+      .form-body {
+        p:nth-child(3) {
+          display: none !important;
+        }
+        .checkoutRemote {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
 
 main.page-content {
   padding-left: 2em;
